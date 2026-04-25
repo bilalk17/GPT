@@ -16,6 +16,6 @@ class Solution:
         pre_activation = np.dot(x, w) + b
         if activation == "sigmoid":
             activation = 1 / (1 + np.exp(-pre_activation))
-        elif activation == "relu":
+        if activation == "relu":
             activation = np.maximum(0, pre_activation)
         return round(activation, 5)
